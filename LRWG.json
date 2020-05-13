@@ -1,0 +1,95 @@
+{
+  "attributes": {},
+  "designState": {
+  	"calculationParameters": {
+  		"LWL_design": 2.08,
+  		"BWL": 0.6,
+  		"Draft_design": 0.09,
+  		"Cb_design": 1,
+  		"speed": 0,
+      "crew" : 0,
+  		"K" : 0.032,
+  		"Co" : 0.3,
+  	},
+  	"objectOverrides": {
+      "derivedByGroup": {
+        "cargo tanks": {
+          "fullness": 0
+        },
+        "ballast tanks": {
+          "fullness": 1
+        }
+      }
+    }
+  },
+  "structure": {
+  	"hull": {
+  		"attributes": {
+  			"LOA": 2.08,
+  			"BOA": 0.6,
+  			"Depth": 0.18,
+  			"APP": 0
+  		},
+  		"halfBreadths": {
+  			"waterlines": [0, 0, 1],
+  			"stations": [0, 1],
+  			"table": [[0, 0], [1, 1], [1, 1]]
+  		},
+  		"buttockHeights": {}
+  	},
+  	"decks": {
+      "BallastTop": {
+				"zFloor": 0.18,
+				"thickness": 0.01,
+				"xAft": 0,
+				"xFwd": 2.08,
+				"yCentre": 0,
+				"breadth": 0.6,
+				"density": 7850
+			}
+    },
+  	"bulkheads": {
+  		"AB": {
+  			"xAft": 1.04,
+  			"thickness": 0.00,
+  			"density": 7850
+  		}
+  	}
+  },
+  "baseObjects": [
+    {
+      "id": "cargo",
+      "affiliations": {},
+      "boxDimensions": {
+        "length": 2.08,
+        "breadth": 0.6,
+        "height": 0.18
+      },
+      "capabilities": {},
+      "baseState": {
+        "fullness": 0
+      },
+      "weightInformation": {
+        "contentDensity": 222.578,
+        "volumeCapacity": 0.22464,
+        "lightweight": 10,
+      }
+    },
+  ],
+  "derivedObjects": [
+    {
+      "id": "Tank1",
+      "baseObject": "cargo",
+      "affiliations": {
+        "group": "cargo tanks",
+        "Deck": "CargoDeck",
+        "SFI": "102"
+      },
+      "referenceState": {
+        "xCentre": 1.04,
+        "yCentre": 0,
+        "zBase": 0
+      }
+    },
+  ]
+}
